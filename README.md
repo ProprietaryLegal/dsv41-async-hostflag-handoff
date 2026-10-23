@@ -104,10 +104,10 @@ The controlled comparison on 2026-10-23 used capacity mode with remote Engram an
 
 | workload | sync, one card | async process, one card | async process, two cards (NVLink TP2) |
 |---|---|---|---|
-| short × 3, step (ms) | 39.6 / 40.1 / 39.4 | 38.3 / 38.1 / 38.3 (−3.5 %) | 37.1 / 37.4 / 36.9 (**−6.5 %**) |
-| 32K × 3, step (ms) | 41.2 / 42.2 / 42.3 | 40.2 / 40.6 / 41.3 (−2.4 %) | 39.6 / 39.5 / 40.2 (**−4.5 %**) |
-| 32K, 3 concurrent, step (ms) | 75.9 / 76.1 / 76.1 | 75.1 / 75.6 / 75.2 (−0.9 %) | 72.8 / 73.5 / 73.0 (**−3.9 %**) |
-| 150K × 2, step (ms) | 41.5 / 42.2 | 40.5 / 39.9 (−3.9 %) | 39.6 / 39.8 (**−5.0 %**) |
+| short × 3, step (ms) | 39.6 / 40.1 / 39.4 | 38.3 / 38.1 / 38.3 (−3.7 %) | 37.1 / 37.4 / 36.9 (**−6.3 %**) |
+| 32K × 3, step (ms) | 41.2 / 42.2 / 42.3 | 40.2 / 40.6 / 41.3 (−3.0 %) | 39.6 / 39.5 / 40.2 (**−5.2 %**) |
+| 32K, 3 concurrent, step (ms) | 75.9 / 76.1 / 76.1 | 75.1 / 75.6 / 75.2 (−1.0 %) | 72.8 / 73.5 / 73.0 (**−3.9 %**) |
+| 150K × 2, step (ms) | 41.5 / 42.2 | 40.5 / 39.9 (−4.0 %) | 39.6 / 39.8 (**−5.1 %**) |
 | 32K TTFT | 14.56–14.59 s | 14.53–14.54 s | 14.49–14.63 s |
 | 150K TTFT | 69.10–69.11 s | 69.24–69.74 s | 68.89–69.09 s |
 
@@ -189,7 +189,7 @@ Conditions: two DGX Spark GB10 nodes, capacity mode with remote Engram and expan
 The warm-up request at start read its 5,041-token prompt in 4.156 s, but returned 1 completion token instead of the
 planned 32. The cause is not yet confirmed, and the warm-up may need a longer prompt to cover the 32K loading cost.
 
-The expected effect of this configuration, from the controlled comparison, is −0.9 to −3.9 % step p50 against the historical synchronous control, with warm-path TTFT near parity.
+The expected effect of this configuration, from the controlled comparison, is −1.0 to −4.0 % step p50 against the historical synchronous control, with warm-path TTFT near parity.
 
 ## Upstream claims
 
