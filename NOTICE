@@ -1,0 +1,16 @@
+PLI Labs — dsv41-async-hostflag-handoff
+Copyright 2026 Proprietary Legal Intelligence LLC
+
+Original PLI Labs code is licensed under Apache-2.0.
+
+Third-party code in this distribution:
+- vLLM dispatch overlay: code/dspark/spark/overlay/vllm/v1/worker/gpu/spec_decode/__init__.py.
+  Apache-2.0; Copyright contributors to the vLLM project.
+  Licence identification is retained in that file's SPDX header.
+  Upstream licence file: https://github.com/vllm-project/vllm/blob/main/LICENSE
+  Licence file in this package: LICENSES/Apache-2.0.txt. The staged code has
+  no separate vLLM NOTICE. The source retains its SPDX and contributor notice.
+
+The target's image and patch lineage is credited to HeNryous and sudoingX.
+DeepSeek supplies the model and DSpark drafter; no model files are distributed.
+The external worker uses turboderp/exllamav3; no exllamav3 source is bundled here.
